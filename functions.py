@@ -26,5 +26,5 @@ def sort_query(value: str, data: Iterable[str]) -> List[str]:
 
 
 def regex_query(value: str, data: Iterable[str]) -> Iterator[str]:
-    pattern = re.compile(r'images\/w+\.png')
+    pattern = re.compile(value)
     return filter(lambda x: re.search(pattern, x), data)

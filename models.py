@@ -1,6 +1,6 @@
 from marshmallow import Schema, ValidationError, fields, validates_schema, validate
 
-VALID_CMD_COMMANDS = ('filter', 'unique', 'map', 'limit', 'sort')
+VALID_CMD_COMMANDS = ('filter', 'unique', 'map', 'limit', 'sort', 'regex')
 from typing import Any
 
 
@@ -16,4 +16,4 @@ class RequestSchema(Schema):
 
 class BatchRequestSchema(Schema):
     queries = fields.Nested(RequestSchema, many=True)
-    fie_name = fields.Str(required=True)
+    file_name = fields.Str(required=True)
